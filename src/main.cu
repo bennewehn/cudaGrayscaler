@@ -68,7 +68,7 @@ int main()
 
     // Allocate memory on GPU
     unsigned char *d_inputImage, *d_outputImage;
-    cudaMalloc(&d_inputImage, width * height * 3 * sizeof(unsigned char));
+    cudaMalloc(&d_inputImage, width * height * channels * sizeof(unsigned char));
     cudaMalloc(&d_outputImage, width * height * sizeof(unsigned char));
 
     // Transfer input image data to GPU
